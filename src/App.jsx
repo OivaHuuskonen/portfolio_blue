@@ -199,11 +199,11 @@ function App() {
 
         <section className="py-10 max-w-4xl m-auto" id="technologies">
           <div className="container px-4">
-            <h2 className="text-2xl font-normal text-[#43513a]">Technologies</h2>
+            <h2 className="text-2xl font-semibold text-[#43513a]">Technologies</h2>
             <div className="mt-14">
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-normal text-[#43513a]">React</h2>
+                  <h2 className="font-semibold text-[#43513a]">React</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
@@ -282,7 +282,7 @@ function App() {
         {/* Additional skills section */}
         <section>
           <div className="container max-w-4xl m-auto px-4 py-14">
-            <h2 className="text-2xl font-normal text-[#43513a]">
+            <h2 className="text-2xl font-semibold text-[#43513a]">
               Additional technologies and skills
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
@@ -507,7 +507,7 @@ function App() {
     
         <section className="py-8 max-w-4xl" id="aboutme">
           <div className="container px-4">
-            <h2 className="text-2xl font-semibold text-[#43513a]">My journey to web development</h2>
+            <h2 className="text-2xl font-semibold text-[#43513a]">My journey</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
