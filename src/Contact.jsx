@@ -32,7 +32,7 @@ const PageHeader = ({ title }) => (
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="contact max-w-4xl m-auto">
     <div style={{ minHeight: '75vh' }} className='bg-[#74889c] flex flex-col justify-between'>
       <div name='contact' className='container mx-auto px-4 pt-4 pb-0'>
         <form action={`https://getform.io/f/${import.meta.env.VITE_REACT_APP_GETFORM_ID}`} method='POST' className='flex flex-col max-w-4xl mx-auto'>

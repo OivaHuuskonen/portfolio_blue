@@ -88,10 +88,13 @@ function App() {
   };
 
   return (
-    <div className="max-w-4xl m-auto relative flex flex-col items-center ">
+
+    <div className="max-w-full w-full m-auto relative flex flex-col items-center">
+    {/*<div className="max-w-4xl m-auto relative flex flex-col items-center">*/}
+
       <header className={`${scrolling ? 'border-b border-[#d7cdc0]' : ''} fixed left-0 right-0 top-0 z-30`} id="home">
-        <div className="container m-auto px-4 py-6 max-w-4xl bg-[#74889c]">
-          <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
+        <div className="container m-auto px-4 py-6 max-w-full bg-[#74889c]">
+          <div className="flex flex-col gap-4 px-6 sm:flex-row justify-between items-center">
             <div>
               <h1 className="font-normal text-2xl text-[#43513a]">Juha Niemikallio</h1>
             </div>
@@ -109,7 +112,7 @@ function App() {
                 </li>
                 <li>
                   <a href="#aboutme" className="text-[#d7cdc0] hover:text-[#FFFFFF] cursor-pointer">
-                    About me
+                    About
                   </a>
                 </li>
                 <li>
@@ -118,25 +121,23 @@ function App() {
                   </a>
                 </li>
               </ul>
-
-
-     
             </div>
           </div>
         </div>
       </header>
 
       <main className="relative mt-28">
-      <section className="flex flex-col-reverse sm:flex-row items-center w-full">
+      <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">
+      
  
-          <div className="container m-auto px-4 pb-8 sm:pt-20 bg-[#74889c] text-center sm:text-left">
+          <div className="container m-auto px-4 pb-8 bg-[#74889c] text-center sm:text-left pt-20">
             <div className="mb-4 sm:mb-0">
               <h2 className="font-normal text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
               <h2 className="font-normal text-4xl mt-1 gradient-text">Fullstack developer</h2>
               <p className="mt-4 text-black">
-                I am a beginner software developer who is currently focused on creating websites and applications
-                using technologies such as react, mern stack, firebase, etc. I also like to take care of
-                app publishing and SEO optimization. Feel free to contact me if you have a project you want to discuss.
+                I am a software developer who is currently focused on creating websites and applications
+                using technologies such as React and MERN stack. I also like to take care of
+                app publishing and SEO optimization. Feel free to contact me if you have a project you want to discuss!
               </p>
               <div className="text-center sm:text-left">
               <a href="#projects" className="inline-block" onClick={handleButtonClick}>
@@ -168,8 +169,8 @@ function App() {
           </div>
         </section>
 
-        <section className="py-10" id="technologies">
-          <div className="container m-auto px-4">
+        <section className="py-10 max-w-4xl m-auto" id="technologies">
+          <div className="container px-4">
             {/*<h2 className="text-2xl font-semibold">These are the technologies i work with</h2>*/}
             <div className="mt-14">
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
@@ -195,8 +196,8 @@ function App() {
           </div>
         </section>
 
-        <section className="py-10" id="technologies">
-          <div className="container m-auto px-4">
+        <section className="py-10 max-w-4xl m-auto" id="technologies">
+          <div className="container px-4">
             <h2 className="text-2xl font-normal text-[#43513a]">Technologies</h2>
             <div className="mt-14">
               <div>
@@ -279,7 +280,7 @@ function App() {
         </section>
         {/* Additional skills section */}
         <section>
-          <div className="container m-auto px-4 py-14">
+          <div className="container max-w-4xl m-auto px-4 py-14">
             <h2 className="text-2xl font-normal text-[#43513a]">
               Additional technologies and skills
             </h2>
@@ -324,7 +325,7 @@ function App() {
 
         {/* Projects section */}
         <section id="projects">
-          <div className="container m-auto px-4 sm:py-12">
+          <div className="container max-w-4xl m-auto px-4 sm:py-12">
             <h2 className="text-2xl font-semibold text-[#43513a]">Projects</h2>
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
@@ -503,8 +504,8 @@ function App() {
         
 
     
-        <section className="py-8" id="aboutme">
-          <div className="container m-auto px-4">
+        <section className="py-8 max-w-4xl" id="aboutme">
+          <div className="container px-4">
             <h2 className="text-2xl font-semibold text-[#43513a]">My journey to web development</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:absolute before:rounded-full before:left-[58px]">
