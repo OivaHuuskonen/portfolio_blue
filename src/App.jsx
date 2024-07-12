@@ -88,11 +88,11 @@ function App() {
   };
 
   return (
-
+    <div className="w-full flex flex-col items-center overflow-x-hidden">
     
-    <div className="container mx-auto relative flex flex-col items-center">
+     {/* <div className="container mx-auto relative flex flex-col items-center">
 
-     {/*<div className="max-w-4xl mx-auto relative flex flex-col items-center">
+   <div className="max-w-4xl mx-auto relative flex flex-col items-center">
     <div className="max-w-full w-full m-auto relative flex flex-col items-center">*/}
   
 
@@ -131,7 +131,7 @@ function App() {
         </div>
       </header>
 
-      <main className="relative mt-28">
+      <main className="relative mt-28 w-full">
       <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">
       
  
