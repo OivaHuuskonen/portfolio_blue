@@ -509,7 +509,7 @@ function App() {
         
 
     
-        <section className="py-8 max-w-4xl" id="aboutme">
+        <section className="py-8 max-w-4xl m-auto" id="aboutme">
           <div className="container px-4">
             <h2 className="text-2xl font-semibold text-[#43513a]">My journey</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
