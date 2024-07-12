@@ -88,12 +88,14 @@ function App() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto relative flex flex-col items-center">
-     {/*<div className="max-w-full w-full m-auto relative flex flex-col items-center">*/}
+    <div className="container mx-auto relative flex flex-col items-center">
+
+     {/*<div className="max-w-4xl mx-auto relative flex flex-col items-center">
+    <div className="max-w-full w-full m-auto relative flex flex-col items-center">*/}
   
 
       <header className={`${scrolling ? 'border-b border-[#d7cdc0]' : ''} fixed left-0 right-0 top-0 z-30`} id="home">
-      <div className="w-full px-4 py-6  bg-[#74889c]">
+      <div className="w-full px-4 py-6 bg-[#74889c]">
         {/*<div className="container m-auto px-4 py-6 max-w-full bg-[#74889c]">*/}
           <div className="flex flex-col gap-4 px-6 sm:flex-row justify-between items-center">
             <div>

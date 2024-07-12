@@ -5,7 +5,6 @@ import React from 'react';
 
 const Footer = ({ title }) => {
   const isArray = Array.isArray(title);
-
   return (
     <div className="bg-[#74889c] italic font-light text-center text-[#d7cdc0]">
       {isArray ? (
