@@ -10,28 +10,18 @@ html, body {
   background-color: #74889c;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-/*
-body {
-    background-color: #74889c;
-    //color:#FFFFFF;
-    margin: 0;
-    padding: 0;
-}
-box-sizing: border-box;*/
-
-
-
 .gradiant-text {
+    background: linear-gradient(to top, #43513a, black);
     -webkit-background-clip: text;
-   @apply bg-gradient-to-t from-[#43513a] to-black text-transparent;
+    color: transparent;
+    {/*@apply bg-gradient-to-t from-[#43513a] to-black text-transparent;*/}
     overflow: hidden;
     border-right: 2px solid #fff;
-    animation: typing-text steps(60) 7s infinite, blink ease 0.3s infinite;
+    animation: typing-text 7s steps(60) infinite, blink ease 0.3s infinite;
     text-wrap: nowrap;
     display: inline-block;
     width: max-content;
@@ -43,12 +33,12 @@ box-sizing: border-box;*/
         width: 0%;
     } 
     to {
-        width: 480px;
+        width: 100%;
     }
 }
 
 @keyframes typing-text {
-    to {
+    50% {
         border-color: transparent;
     }
 }

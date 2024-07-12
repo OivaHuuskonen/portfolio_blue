@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useEffect, useState } from "react";
 import Porfile from "./assets/portfolio_ai.jpg";
 import Contact from './Contact'
 import Portfolio from "./assets/portfolio.jpg";
@@ -35,7 +36,6 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { TbAccessibleOff } from "react-icons/tb";
 
@@ -97,14 +97,14 @@ function App() {
   
 
       <header className={`${scrolling ? 'border-b border-[#d7cdc0]' : ''} fixed left-0 right-0 top-0 z-30`} id="home">
-      <div className="w-full px-4 py-6 bg-[#74889c]">
+      <div className="w-full px-6 py-6 bg-[#74889c]">
         {/*<div className="container m-auto px-4 py-6 max-w-full bg-[#74889c]">*/}
-          <div className="flex flex-col gap-4 px-6 sm:flex-row justify-between items-center">
+          <div className="flex flex-col gap-4 px-4 sm:flex-row justify-between items-center">
             <div>
               <h1 className="font-normal text-2xl text-[#43513a]">Juha Niemikallio</h1>
             </div>
             <div>
-              <ul className="flex gap-4">
+              <ul className="flex gap-3">
                 <li>
                   <a href="#projects" className="text-[#d7cdc0] hover:text-[#FFFFFF] cursor-pointer">
                     Projects
@@ -163,18 +163,18 @@ function App() {
             </div>
           </div>
           
-          <div className="relative mt-8 mb-8 sm:mb-0 sm:ml-8">
-            <div className="after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] 
+          <div className="relative mt-8 mb-6 sm:mb-0 sm:ml-8">
+            <div className="z-15 after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] 
                             after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40
 
                             before:bg-[url('./large-long.png')] before:bg-contain before:block before:bg-no-repeat
                             before:w-[220px] before:h-[220px] before:absolute before:bottom-6 before:-right-16">
-              <img src={Porfile} className="mt-10 relative z-20 w-[320px] h-[320px] m-auto sm:w-[550px] sm:h-[350px] rounded-full" />
+              <img src={Porfile} className="mt-10 relative z-20 w-[320px] h-[320px] m-auto sm:w-[560px] sm:h-[350px] rounded-full" />
             </div>
           </div>
         </section>
 
-        <section className="py-10 max-w-4xl m-auto" id="technologies">
+        <section className="pb-10 max-w-4xl m-auto" id="technologies">
           <div className="container px-4">
             {/*<h2 className="text-2xl font-semibold">These are the technologies i work with</h2>*/}
             <div className="mt-14">
@@ -339,15 +339,13 @@ function App() {
                 Online store for used vinyl records focused on 50s American music.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
-                  MERN Stack (MongoDB, Express, React, NodeJS) 
-                  with responsive Bootstrap CSS layout for E-commerce. 
-                  fully functional Admin dashboard 
+                  MERN Stack with responsive Bootstrap layout for E-commerce, fully functional Admin dashboard 
                   and order management with SendGrid email and PayPal/Braintree payment management system.
                 </p>
                 <div className="flex mt-12 gap-2">
                   {/*<button className="flex-1 text-sm py-3 bg-gradient-to-t from-[#376B2F] rounded-full to-[#6B632F] hover:from-blue-700 hover:to-cyan-700">*/}
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                  <a className='flex justify-between items-center w-full pl-10 text-gray-300' href='https://ezz24.onrender.com'>
+                  <a className='text-gray-300' href='https://ezz24.onrender.com'>
                     Live preview
                     </a>
                   </button>
@@ -388,7 +386,7 @@ function App() {
                 </p>
                 <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                    <a className='flex justify-between items-center w-full pl-10 text-gray-300' href='https://verenpaine-mitta.web.app/'>
+                    <a className='text-gray-300' href='https://verenpaine-mitta.web.app/'>
                     Live preview
                     </a>
                   </button>
@@ -408,7 +406,7 @@ function App() {
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
                    
-                    <a className='flex justify-between items-center w-full pl-10 text-gray-300' href='https://burgerclicker-accd2.web.app/'>
+                    <a className='text-gray-300' href='https://burgerclicker-accd2.web.app/'>
                     Live preview
                     </a>
                   </button>
@@ -467,6 +465,7 @@ function App() {
                 </p>
                 <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
+              
                     Live preview
                   </button>
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
@@ -486,7 +485,7 @@ function App() {
                 </p>
                 <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                  <a className='flex justify-between items-center w-full pl-10 text-gray-300' href='https://phonebook24.onrender.com/'>
+                  <a className='text-gray-300' href='https://phonebook24.onrender.com/'>
                     Live preview
                     </a>
                   </button>
@@ -550,15 +549,15 @@ function App() {
             </div>
           </div>
         </section>
-      </main>
+      
 
       <br></br>  <br></br>
     
       <Contact />
-    
+      </main>
       {
         scrolling && (
-          <button className="fixed block right-8 bottom-0 w-24" onClick={() => {
+          <button className="fixed block right-8 bottom-0 w-34" onClick={() => {
             window.scrollTo(0,0);
           }}>
             <img src={ArrowDown} />
