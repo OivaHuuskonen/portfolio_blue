@@ -146,7 +146,7 @@ function App() {
       <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">
       
  
-          <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-14">
+          <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-8">
             <div className="mb-4 sm:mb-0">
               <h2 className="font-normal text-3xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
               <h2 className="font-normal text-3xl sm:text-4xl  mt-1 gradient-text">Fullstack developer</h2>
