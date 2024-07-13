@@ -88,7 +88,7 @@ function App() {
   };
 
   const onButtonClickPDF = () => {
-    const pdfUrl = "/pdf.pdf";
+    const pdfUrl = "/pdz.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "document.pdf"; 
@@ -148,8 +148,8 @@ function App() {
  
           <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-8">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-normal text-3xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
-              <h2 className="font-normal text-3xl sm:text-4xl  mt-1 gradient-text">Fullstack developer</h2>
+              <h2 className="font-normal text-2xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
+              <h2 className="font-normal text-2xl sm:text-4xl  mt-1 gradient-text">Fullstack developer</h2>
               <p className="mt-4 text-black">
                 I am a software developer who is currently focused on creating websites and applications
                 using technologies such as React and MERN stack. I also like to take care of
@@ -214,18 +214,18 @@ function App() {
 
         <section className="py-10 max-w-4xl m-auto" id="technologies">
           <div className="container px-4">
-            <h2 className="text-2xl font-normal">Technologies</h2>
+            <h2 className="text-2xl font-bormal">Technologies</h2>
             <div className="mt-14">
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-normal text-[#43513a]">React</h2>
+                  <h2 className="font-semibold text-[#43513a]">React</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-normal text-[#43513a]">TailwindCSS</h2>
+                  <h2 className="font-semibold text-[#43513a]">TailwindCSS</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
@@ -430,7 +430,7 @@ function App() {
 
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
-                <img src={Portfolio} className="w-full h-auto" />
+                <img src={Burger} className="w-full h-auto" />
                 <h3 className="text-2xl font-semibold mt-8">  
                  Portfolito website.
                 </h3>
@@ -447,7 +447,7 @@ function App() {
                 </div>
               </div>
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
-                <img src={ta} className="w-full h-auto" />
+                <img src={Burger} className="w-full h-auto" />
                 <h3 className="text-2xl font-semibold mt-8">
                  Association or company website with a database.
                 </h3>
