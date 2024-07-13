@@ -87,6 +87,17 @@ function App() {
     }, 300); // 300ms delay for the rotation animation
   };
 
+  const onButtonClickPDF = () => {
+    const pdfUrl = "/pdf.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "document.pdf"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
+
   return (
     <div className="w-full flex flex-col items-center overflow-x-hidden">
     
@@ -135,10 +146,10 @@ function App() {
       <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">
       
  
-          <div className="container m-auto px-4 pb-8 bg-[#74889c] text-center sm:text-left pt-20">
+          <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-14">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-normal text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
-              <h2 className="font-normal text-4xl mt-1 gradient-text">Fullstack developer</h2>
+              <h2 className="font-normal text-3xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
+              <h2 className="font-normal text-3xl sm:text-4xl  mt-1 gradient-text">Fullstack developer</h2>
               <p className="mt-4 text-black">
                 I am a software developer who is currently focused on creating websites and applications
                 using technologies such as React and MERN stack. I also like to take care of
@@ -203,18 +214,18 @@ function App() {
 
         <section className="py-10 max-w-4xl m-auto" id="technologies">
           <div className="container px-4">
-            <h2 className="text-2xl font-semibold text-[#43513a]">Technologies</h2>
+            <h2 className="text-2xl font-normal">Technologies</h2>
             <div className="mt-14">
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold text-[#43513a]">React</h2>
+                  <h2 className="font-normal text-[#43513a]">React</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold text-[#43513a]">TailwindCSS</h2>
+                  <h2 className="font-normal text-[#43513a]">TailwindCSS</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
@@ -286,22 +297,22 @@ function App() {
         {/* Additional skills section */}
         <section>
           <div className="container max-w-4xl m-auto px-4 py-14">
-            <h2 className="text-2xl font-semibold text-[#43513a]">
+            <h2 className="text-2xl font-normal">
               Additional technologies and skills
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
               <div>
-                <p className="text-[#43513a] font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                  UI / UX design
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   B2 english
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Mindfullness
                 </p>
               </div>
@@ -309,17 +320,17 @@ function App() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
             <div>
-                <p className="text-[#43513a] font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Video editing
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Producing music
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   and much more ...
                 </p>
               </div>
@@ -331,7 +342,7 @@ function App() {
         {/* Projects section */}
         <section id="projects">
           <div className="container max-w-4xl m-auto px-4 sm:py-12">
-            <h2 className="text-2xl font-semibold text-[#43513a]">Projects</h2>
+            <h2 className="text-2xl font-normal">Projects</h2>
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={jumble} className="w-full h-auto" />
@@ -589,9 +600,12 @@ function App() {
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-20px] duration-300 bg-[#565f69]'>
-            <a className='flex justify-between items-center w-full pl-10 text-gray-300' href='/resume.pdf'>
+            {/*<a className='flex justify-between items-center w-full pl-10 text-gray-300' href='/resume.pdf'>
               CV <BsFillPersonLinesFill size={30} className="mr-4"/>
-            </a>
+            </a>*/}
+             <button className='flex justify-between items-center w-full pl-10 text-gray-300' onClick={onButtonClickPDF}>
+                    CV <BsFillPersonLinesFill size={30} className="mr-4"/>
+                </button>
           </li>
         </ul>
       </div>
