@@ -522,7 +522,7 @@ function App() {
     
         <section className="py-8 max-w-4xl m-auto" id="aboutme">
           <div className="container px-4">
-            <h2 className="text-2xl font-semibold text-[#43513a]">My journey</h2>
+            <h2 className="text-2xl font-normal">My journey</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
