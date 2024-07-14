@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+import MyJourney from "./MyJourney";
 import Porfile from "./assets/portfolio_ai.jpg";
 import Contact from './Contact'
 import Portfolio from "./assets/portfolio.jpg";
@@ -88,7 +89,7 @@ function App() {
   };
 
   const onButtonClickPDF = () => {
-    const pdfUrl = "/pdz.pdf";
+    const pdfUrl = "/cv.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "document.pdf"; 
@@ -115,7 +116,7 @@ function App() {
               <h1 className="font-normal text-2xl text-[#43513a]">Juha Niemikallio</h1>
             </div>
             <div>
-              <ul className="flex gap-3">
+              <ul className="flex gap-3 sm:gap-10">
                 <li>
                   <a href="#projects" className="text-[#d7cdc0] hover:text-[#FFFFFF] cursor-pointer">
                     Projects
@@ -146,10 +147,10 @@ function App() {
       <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">
       
  
-          <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-8">
+          <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-6">
             <div className="mb-4 sm:mb-0">
               <h2 className="font-normal text-2xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
-              <h2 className="font-normal text-2xl sm:text-4xl  mt-1 gradient-text">Fullstack developer</h2>
+              <h2 className="font-normal text-2xl mt-1 gradient-text sm:text-4xl">Fullstack developer</h2>
               <p className="mt-4 text-black">
                 I am a software developer who is currently focused on creating websites and applications
                 using technologies such as React and MERN stack. I also like to take care of
@@ -174,9 +175,9 @@ function App() {
             </div>
           </div>
           
-          <div className="relative mt-8 mb-6 sm:mb-0 sm:ml-8">
-            <div className="z-15 after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] 
-                            after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40
+          <div className="relative mt-2 mb-6 sm:mb-0 sm:ml-8">
+            <div className="z-18 after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[480px] 
+                            after:h-[360px] after:absolute after:top-0 after:-left-20 sm:after:-left-40
 
                             before:bg-[url('./large-long.png')] before:bg-contain before:block before:bg-no-repeat
                             before:w-[220px] before:h-[220px] before:absolute before:bottom-6 before:-right-16">
@@ -560,7 +561,10 @@ function App() {
             </div>
           </div>
         </section>
-      
+
+
+        <br></br>  <br></br>
+      <MyJourney />
 
       <br></br>  <br></br>
     

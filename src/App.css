@@ -14,17 +14,20 @@ html {
     scroll-behavior: smooth;
 }
 
-.gradiant-text {
+.gradient-text {
     background: linear-gradient(to top, #43513a, black);
     -webkit-background-clip: text;
-    color: transparent;
-    {/*@apply bg-gradient-to-t from-[#43513a] to-black text-transparent;*/}
+    //background-clip: text;
+    @apply bg-gradient-to-t from-[#43513a] to-black text-transparent;
+     color: transparent;
     overflow: hidden;
-    border-right: 2px solid #fff;
+    border-right: 0px solid #fff;
     animation: typing-text 7s steps(60) infinite, blink ease 0.3s infinite;
+    //animation: typing-text 7s steps(60) infinite, blink-text 0.75s step-end infinite alternate;
     text-wrap: nowrap;
+    //white-space: nowrap;
     display: inline-block;
-    width: max-content;
+    //width: max-content;
     width: 0;
 }
 
