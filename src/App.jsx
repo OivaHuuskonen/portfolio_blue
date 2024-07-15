@@ -356,13 +356,13 @@ function App() {
                   and order management with SendGrid email and PayPal/Braintree payment management system.
                 </p>
                 <div className="flex mt-12 gap-2">
-                  {/*<button className="flex-1 text-sm py-3 bg-gradient-to-t from-[#376B2F] rounded-full to-[#6B632F] hover:from-blue-700 hover:to-cyan-700">*/}
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                  <a className='text-gray-300' href='https://ezz24.onrender.com'>
+                 {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-[#376B2F] rounded-full to-[#6B632F] hover:from-blue-700 hover:to-cyan-700">*/}
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:from-[#d7cdc0]  hover:to-[#FFFFFF]">
+                  <a className='text-[#d7cdc0]' href='https://ezz24.onrender.com'>
                     Live preview
                     </a>
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
