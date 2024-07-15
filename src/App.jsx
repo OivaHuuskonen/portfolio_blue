@@ -216,25 +216,25 @@ function App() {
 
         <section className="py-10 max-w-4xl m-auto" id="technologies">
           <div className="container px-4">
-            <h2 className="text-2xl font-bormal">Technologies</h2>
+            <h2 className="text-2xl font-normal">Technologies</h2>
             <div className="mt-14">
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold text-[#43513a]">React</h2>
+                  <h2 className="font-normal text-[#43513a]">React</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold text-[#43513a]">TailwindCSS</h2>
+                  <h2 className="font-normal text-[#43513a]">TailwindCSS</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold text-[#43513a]">
+                  <h2 className="font-normal text-[#43513a]">
                     MongoDB
                   </h2>
                   <p className="text-[#9C749C]">Advanced</p>
