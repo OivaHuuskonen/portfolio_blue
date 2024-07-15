@@ -45,13 +45,13 @@ const MyJourney = () => {
                 <h3 className="text-lg font-semibold">2013</h3>
               </div>
               <div className="year-container mb-24 relative">
-                <h3 className="text-lg font-semibold"></h3>
+                <h3 className="text-lg font-semibold">1995 <br></br>2012</h3>
               </div>
             </div>
 
             {/* Palkki ja pallo */}
-            <div className="relative w-16 flex justify-center">
-              <div className="absolute w-1 bg-white h-full left-1/2 transform -translate-x-1/2"></div>
+            <div className="relative w-3 flex justify-center">
+              <div className="absolute w-1 bg-white h-full left-1/2 transform -translate-x-1/2 rounded-xl"></div>
               <div
                 className="absolute transition-all duration-300 ease-in-out"
                 style={{ top: `${activeYearPosition}px`, left: '50%', transform: 'translateX(-50%)' }}
@@ -61,10 +61,12 @@ const MyJourney = () => {
             </div>
 
             {/* Kuvaukset */}
-            <div className="flex-1 pl-8">
+            <div className="flex-1 pl-7">
               <div className="year-container mb-24 relative">
                 <p>
-                  BearIT ITC-Camp with a focus on Fullstack development. Two Udemy certificates in React, NodeJS, MongoDB, and Express + two more certificates in Agile and Git.
+                  BearIT ITC-Camp with a focus on Fullstack development. 
+                  Two Udemy certificates in React, NodeJS, MongoDB, and Express 
+                  + two more certificates in Agile and Git.
                 </p>
               </div>
               <div className="year-container mb-20 relative">
@@ -74,7 +76,7 @@ const MyJourney = () => {
                   Software developer / Fullstack developer.
                 </p>
               </div>
-              <div className="year-container mb-20 relative">
+              <div className="year-container mb-16 relative">
                 <p>
                   I am starting self-study of website development with the help of MOOC courses of the Open University of Helsinki (e.g. Full Stack open)
                   and AMKoodari courses of open universities of applied sciences.

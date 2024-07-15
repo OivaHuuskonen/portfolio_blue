@@ -149,8 +149,9 @@ function App() {
  
           <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-6">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-normal text-2xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
-              <h2 className="font-normal text-2xl mt-1 gradient-text sm:text-4xl">Fullstack developer</h2>
+              <h2 className="font-normal text-3xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
+              {/*<h2 className="font-normal text-2xl mt-1 sm:text-4xl gradient-text">Fullstack developer</h2>*/}
+              <h2 className="font-normal text-3xl mt-1 sm:text-4xl">Fullstack developer</h2>
               <p className="mt-4 text-black">
                 I am a software developer who is currently focused on creating websites and applications
                 using technologies such as React and MERN stack. I also like to take care of
@@ -520,14 +521,15 @@ function App() {
         
 
     
-        <section className="py-8 max-w-4xl m-auto" id="aboutme">
+        {/*<section className="py-8 max-w-4xl m-auto" id="aboutme">
           <div className="container px-4">
             <h2 className="text-2xl font-normal">My journey</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
                 <p>
-                  BearIT ITC-Camp with a focus on Fullstack development. Two Udemy certificates in React, NodeJS, MongoDB, and Express + two more certificates in Agile and Git.
+                  BearIT ITC-Camp with a focus on Fullstack development. Two Udemy certificates in React, NodeJS, MongoDB, and Express
+                  + two more certificates in Agile and Git.
                 </p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:absolute before:rounded-full before:left-[58px]">
@@ -552,7 +554,7 @@ function App() {
                 </p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:absolute before:rounded-full before:left-[58px]">
-                <h3 className="absolute left-0 text-lg font-semibold"></h3>
+                <h3 className="absolute left-0 text-lg font-semibold">1995</h3>
                 <p>
                  Construction site carpenter, guitar player, library worker, youth instructor, asphalt worker, janitor, 
                  smartphone assembly and quality control etc,. 
@@ -560,7 +562,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
 
 
         <br></br>  <br></br>
