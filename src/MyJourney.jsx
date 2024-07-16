@@ -13,7 +13,7 @@ const MyJourney = () => {
         const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
         if (distance < closestDistance) {
           closestYear = yearElement;
-          closestDistance = distance;
+          closestDistance = distance;    
         }
       });
       if (closestYear) {
