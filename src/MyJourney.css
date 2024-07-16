@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .year-container {
+    margin-bottom: 16px;
+  }
+  .year-container h3 {
+    font-size: 1rem;
+  }
+  .year-container p {
+    font-size: 0.875rem;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .flex-1 {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+  .relative {
+    width: 100%;
+  }
+}
