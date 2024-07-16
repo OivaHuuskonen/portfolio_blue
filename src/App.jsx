@@ -220,21 +220,21 @@ function App() {
             <div className="mt-14">
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-normal text-[#43513a]">React</h2>
+                  <h2 className="font-semibold text-[#43513a]">React</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-normal text-[#43513a]">TailwindCSS</h2>
+                  <h2 className="font-semibold text-[#43513a]">TailwindCSS</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-normal text-[#43513a]">
+                  <h2 className="font-semibold text-[#43513a]">
                     MongoDB
                   </h2>
                   <p className="text-[#9C749C]">Advanced</p>
@@ -304,17 +304,17 @@ function App() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
               <div>
-                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-semibold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                  UI / UX design
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-semibold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   B2 english
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-semibold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74] before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Mindfullness
                 </p>
               </div>
@@ -322,18 +322,18 @@ function App() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
             <div>
-                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-semibold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Video editing
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="text-[#43513a] font-semibold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Producing music
                 </p>
               </div>
               <div>
-                <p className="text-[#43513a] font-normal before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  and much more ...
+                <p className="text-[#43513a] font-semibold before:w-4 before:h-4 before:bg-gradient-to-t before:from-[#9C749C] before:to-[#749C74]  before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                  and more
                 </p>
               </div>
             
@@ -348,7 +348,7 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={jumble} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-2xl font-normal mt-8">
                 Online store for used vinyl records focused on 50s American music.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -369,7 +369,7 @@ function App() {
               </div>
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={rent} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-2xl font-normal mt-8">
                   Real estate E-commerce app.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -391,7 +391,7 @@ function App() {
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={BP} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">  
+                <h3 className="text-2xl font-normal mt-8">  
                 Free blood pressure and heart rate monitoring application.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -410,7 +410,7 @@ function App() {
               </div>
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={Burger} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-2xl font-normal mt-8">
                  Hamburger Clicker App.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -433,7 +433,7 @@ function App() {
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={Burger} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">  
+                <h3 className="text-2xl font-normal mt-8">  
                  Portfolito website.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -450,7 +450,7 @@ function App() {
               </div>
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={Burger} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-2xl font-normal mt-8">
                  Association or company website with a database.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -470,7 +470,7 @@ function App() {
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={festival} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">  
+                <h3 className="text-2xl font-normal mt-8">  
                 Fully responsive music festival website / mern-stack.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
@@ -478,7 +478,6 @@ function App() {
                 </p>
                 <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-              
                     Live preview
                   </button>
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
@@ -490,7 +489,7 @@ function App() {
 
                 <div className="border border-[#d7cdc0] rounded-md p-5 flex-1">
                 <img src={phonebook} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">  
+                <h3 className="text-2xl font-normal mt-8">  
                  Mern stack phonebook. Helsinki university Fullstack open course project.
                 </h3>
                 <p className="text-[#d7cdc0] text-sm mt-2">
