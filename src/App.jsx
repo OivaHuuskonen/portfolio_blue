@@ -150,9 +150,9 @@ function App() {
  
           <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-6">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-normal text-3xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
+              <h2 className="font-normal text-2xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
               {/*<h2 className="font-normal text-2xl mt-1 sm:text-4xl gradient-text">Fullstack developer</h2>*/}
-              <h2 className="font-normal text-3xl mt-1 sm:text-4xl">Fullstack developer</h2>
+              <h2 className="font-normal text-2xl mt-1 sm:text-4xl">Fullstack developer</h2>
               <p className="mt-4 text-black">
                 I am a software developer who is currently focused on creating websites and applications
                 using technologies such as React and MERN stack. I also like to take care of
@@ -177,7 +177,7 @@ function App() {
             </div>
           </div>
           
-          <div className="relative mt-2 mb-6 sm:mb-0 sm:ml-8">
+          {/*<div className="relative mt-2 mb-6 sm:mb-0 sm:ml-8">
             <div className="z-18 after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[480px] 
                             after:h-[360px] after:absolute after:top-0 after:-left-20 sm:after:-left-40
 
@@ -185,7 +185,21 @@ function App() {
                             before:w-[220px] before:h-[220px] before:absolute before:bottom-6 before:-right-16">
               <img src={Porfile} className="mt-10 relative z-20 w-[320px] h-[320px] m-auto sm:w-[560px] sm:h-[350px] rounded-full" />
             </div>
-          </div>
+          </div>*/}
+
+
+
+<div className="relative mt-2 mb-6 sm:mb-0 sm:ml-8">
+  <div className="z-18 after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[480px] 
+                  after:h-[360px] after:absolute after:top-0 after:-left-20 sm:after:-left-40
+
+                  before:bg-[url('./large-long.png')] before:bg-contain before:block before:bg-no-repeat
+                  before:w-[220px] before:h-[220px] before:absolute before:bottom-6 before:-right-16">
+    <img src={Porfile} className="mt-10 relative z-20 w-[320px] h-[320px] m-auto sm:w-[560px] sm:h-[350px] rounded-full" />
+  </div>
+</div>
+
+
         </section>
 
         <section className="pb-10 max-w-4xl m-auto" id="technologies">
