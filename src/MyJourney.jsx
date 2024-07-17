@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const MyJourney = () => {
   const [activeYearPosition, setActiveYearPosition] = useState(0);
+  const timelineContainerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
+      const timelineContainer = timelineContainerRef.current;
+      const containerRect = timelineContainer.getBoundingClientRect();
+      const containerTop = containerRect.top + window.scrollY;
+      const containerHeight = containerRect.height;
+
       let closestYear = null;
       let closestDistance = Infinity;
-      const timelineContainer = document.querySelector('.timeline-container');
-      const containerTop = timelineContainer.offsetTop;
-      const containerBottom = containerTop + timelineContainer.offsetHeight;
 
       document.querySelectorAll('.year-container').forEach((yearElement) => {
         const rect = yearElement.getBoundingClientRect();
-        const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+        const yearMiddle = rect.top + rect.height / 2 + window.scrollY;
+        const distance = Math.abs(yearMiddle - (window.scrollY + window.innerHeight / 2));
+
         if (distance < closestDistance) {
           closestYear = yearElement;
           closestDistance = distance;
@@ -21,10 +26,13 @@ const MyJourney = () => {
       });
 
       if (closestYear) {
-        let newActiveYearPosition = closestYear.offsetTop - containerTop;
-        const minPosition = -window.innerHeight / 2 + 20; // Adjusted here for the top limit
-        const maxPosition = containerBottom - containerTop - 20; // Adjusted here for the bottom limit
+        const yearOffsetTop = closestYear.getBoundingClientRect().top + window.scrollY - containerTop;
+        const minPosition = 0;
+        const maxPosition = containerHeight - 20;
+
+        let newActiveYearPosition = yearOffsetTop + closestYear.getBoundingClientRect().height / 2 - 10;
         newActiveYearPosition = Math.min(Math.max(newActiveYearPosition, minPosition), maxPosition);
+
         setActiveYearPosition(newActiveYearPosition);
       }
     };
@@ -37,7 +45,10 @@ const MyJourney = () => {
     <section className="py-8 max-w-4xl m-auto" id="aboutme">
       <div className="container px-4 relative">
         <h2 className="text-2xl font-normal">My journey</h2>
-        <div className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
+        <div
+          ref={timelineContainerRef}
+          className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white"
+        >
           {/* Pallo */}
           <div
             className="absolute transition-all duration-300 ease-in-out"
@@ -89,6 +100,417 @@ const MyJourney = () => {
 };
 
 export default MyJourney;
+
+
+
+{/*import React, { useState, useEffect, useRef } from 'react';
+
+const MyJourney = () => {
+  const [activeYearPosition, setActiveYearPosition] = useState(0);
+  const timelineContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const timelineContainer = timelineContainerRef.current;
+      const containerRect = timelineContainer.getBoundingClientRect();
+      const containerTop = containerRect.top + window.scrollY;
+      const containerBottom = containerTop + containerRect.height;
+      const containerHeight = containerRect.height;
+
+      let closestYear = null;
+      let closestDistance = Infinity;
+
+      document.querySelectorAll('.year-container').forEach((yearElement) => {
+        const rect = yearElement.getBoundingClientRect();
+        const yearTop = rect.top + window.scrollY;
+        const distance = Math.abs(yearTop - window.scrollY - window.innerHeight / 2);
+
+        if (distance < closestDistance) {
+          closestYear = yearElement;
+          closestDistance = distance;
+        }
+      });
+
+      if (closestYear) {
+        const yearOffsetTop = closestYear.getBoundingClientRect().top + window.scrollY - containerTop;
+        const minPosition = 0;
+        const maxPosition = containerHeight - 20;
+
+        let newActiveYearPosition = window.scrollY - containerTop + window.innerHeight / 2 - 10;
+        newActiveYearPosition = Math.min(Math.max(newActiveYearPosition, minPosition), maxPosition);
+
+        setActiveYearPosition(newActiveYearPosition);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <section className="py-8 max-w-4xl m-auto" id="aboutme">
+      <div className="container px-4 relative">
+        <h2 className="text-2xl font-normal">My journey</h2>
+        <div
+          ref={timelineContainerRef}
+          className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white"
+        >
+         
+          <div
+            className="absolute transition-all duration-300 ease-in-out"
+            style={{ top: `${activeYearPosition}px`, left: '4rem', transform: 'translateX(-50%)' }}
+          >
+            <div className="w-4 h-4 bg-gradient-to-t from-[#9C749C] to-[#749C74] rounded-full"></div>
+          </div>
+
+          <div className="pl-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+            <p>
+              BearIT ITC-Camp with a focus on Fullstack development.
+              Two Udemy certificates in React, NodeJS, MongoDB, and Express
+              + two more certificates in Agile and Git.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2023</h3>
+            <p>
+              In the fall of 2023, I graduated from Sasky Huittinen
+              adult education institution with a bachelor's degree in Computer Science,
+              Software developer / Fullstack developer.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2020</h3>
+            <p>
+              I am starting self-study of website development with the help of MOOC courses of the Open University of Helsinki (e.g. Full Stack open)
+              and AMKoodari courses of open universities of applied sciences.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2013</h3>
+            <p>
+              Pirkanmaan aikuisopisto, design assistant, technical illustrator, 3D modeler.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">1995</h3>
+            <p>
+              Construction site carpenter, guitar player, library worker, youth instructor, asphalt worker, janitor,
+              smartphone assembly and quality control etc,.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MyJourney;*/}
+
+
+
+
+
+{/*import React, { useState, useEffect, useRef } from 'react';
+
+const MyJourney = () => {
+  const [activeYearPosition, setActiveYearPosition] = useState(0);
+  const timelineContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const timelineContainer = timelineContainerRef.current;
+      const containerRect = timelineContainer.getBoundingClientRect();
+      const containerTop = containerRect.top + window.scrollY;
+      const containerHeight = containerRect.height;
+
+      let closestYear = null;
+      let closestDistance = Infinity;
+
+      document.querySelectorAll('.year-container').forEach((yearElement) => {
+        const rect = yearElement.getBoundingClientRect();
+        const yearTop = rect.top + window.scrollY;
+        const distance = Math.abs(yearTop - window.scrollY - window.innerHeight / 2);
+
+        if (distance < closestDistance) {
+          closestYear = yearElement;
+          closestDistance = distance;
+        }
+      });
+
+      if (closestYear) {
+        const yearOffsetTop = closestYear.getBoundingClientRect().top + window.scrollY - containerTop;
+        const minPosition = 0;
+        const maxPosition = containerHeight - 20;
+
+        let newActiveYearPosition = yearOffsetTop - window.innerHeight / 2 + 20;
+        newActiveYearPosition = Math.min(Math.max(newActiveYearPosition, minPosition), maxPosition);
+
+        setActiveYearPosition(newActiveYearPosition);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <section className="py-8 max-w-4xl m-auto" id="aboutme">
+      <div className="container px-4 relative">
+        <h2 className="text-2xl font-normal">My journey</h2>
+        <div
+          ref={timelineContainerRef}
+          className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white"
+        >
+ 
+          <div
+            className="absolute transition-all duration-300 ease-in-out"
+            style={{ top: `${activeYearPosition}px`, left: '4rem', transform: 'translateX(-50%)' }}
+          >
+            <div className="w-4 h-4 bg-gradient-to-t from-[#9C749C] to-[#749C74] rounded-full"></div>
+          </div>
+
+          <div className="pl-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+            <p>
+              BearIT ITC-Camp with a focus on Fullstack development.
+              Two Udemy certificates in React, NodeJS, MongoDB, and Express
+              + two more certificates in Agile and Git.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2023</h3>
+            <p>
+              In the fall of 2023, I graduated from Sasky Huittinen
+              adult education institution with a bachelor's degree in Computer Science,
+              Software developer / Fullstack developer.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2020</h3>
+            <p>
+              I am starting self-study of website development with the help of MOOC courses of the Open University of Helsinki (e.g. Full Stack open)
+              and AMKoodari courses of open universities of applied sciences.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2013</h3>
+            <p>
+              Pirkanmaan aikuisopisto, design assistant, technical illustrator, 3D modeler.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">1995</h3>
+            <p>
+              Construction site carpenter, guitar player, library worker, youth instructor, asphalt worker, janitor,
+              smartphone assembly and quality control etc,.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MyJourney;*/}
+
+
+{/*
+import React, { useState, useEffect, useRef } from 'react';
+
+const MyJourney = () => {
+  const [activeYearPosition, setActiveYearPosition] = useState(0);
+  const timelineContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let closestYear = null;
+      let closestDistance = Infinity;
+      const timelineContainer = timelineContainerRef.current;
+      const containerTop = timelineContainer.offsetTop;
+      const containerHeight = timelineContainer.offsetHeight;
+
+      document.querySelectorAll('.year-container').forEach((yearElement) => {
+        const rect = yearElement.getBoundingClientRect();
+        const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+        if (distance < closestDistance) {
+          closestYear = yearElement;
+          closestDistance = distance;
+        }
+      });
+
+      if (closestYear) {
+        const yearOffsetTop = closestYear.offsetTop;
+        const minPosition = 0;
+        const maxPosition = containerHeight - window.innerHeight / 2;
+
+        let newActiveYearPosition = yearOffsetTop - containerTop + window.innerHeight / 2 - 20; // Adjusted for center alignment
+        newActiveYearPosition = Math.min(Math.max(newActiveYearPosition, minPosition), maxPosition);
+        setActiveYearPosition(newActiveYearPosition);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <section className="py-8 max-w-4xl m-auto" id="aboutme">
+      <div className="container px-4 relative">
+        <h2 className="text-2xl font-normal">My journey</h2>
+        <div
+          ref={timelineContainerRef}
+          className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white"
+        >
+    
+          <div
+            className="absolute transition-all duration-300 ease-in-out"
+            style={{ top: `${activeYearPosition}px`, left: '4rem', transform: 'translateX(-50%)' }}
+          >
+            <div className="w-4 h-4 bg-gradient-to-t from-[#9C749C] to-[#749C74] rounded-full"></div>
+          </div>
+
+          <div className="pl-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+            <p>
+              BearIT ITC-Camp with a focus on Fullstack development.
+              Two Udemy certificates in React, NodeJS, MongoDB, and Express
+              + two more certificates in Agile and Git.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2023</h3>
+            <p>
+              In the fall of 2023, I graduated from Sasky Huittinen
+              adult education institution with a bachelor's degree in Computer Science,
+              Software developer / Fullstack developer.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2020</h3>
+            <p>
+              I am starting self-study of website development with the help of MOOC courses of the Open University of Helsinki (e.g. Full Stack open)
+              and AMKoodari courses of open universities of applied sciences.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2013</h3>
+            <p>
+              Pirkanmaan aikuisopisto, design assistant, technical illustrator, 3D modeler.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">1995</h3>
+            <p>
+              Construction site carpenter, guitar player, library worker, youth instructor, asphalt worker, janitor,
+              smartphone assembly and quality control etc,.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MyJourney;
+
+
+
+
+
+
+
+ import React, { useState, useEffect } from 'react';
+
+const MyJourney = () => {
+  const [activeYearPosition, setActiveYearPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let closestYear = null;
+      let closestDistance = Infinity;
+      const timelineContainer = document.querySelector('.timeline-container');
+      const containerTop = timelineContainer.offsetTop;
+      const containerBottom = containerTop + timelineContainer.offsetHeight;
+
+      document.querySelectorAll('.year-container').forEach((yearElement) => {
+        const rect = yearElement.getBoundingClientRect();
+        const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+        if (distance < closestDistance) {
+          closestYear = yearElement;
+          closestDistance = distance;
+        }
+      });
+
+      if (closestYear) {
+        let newActiveYearPosition = closestYear.offsetTop - containerTop;
+        const minPosition = -window.innerHeight / 2 + 1; // Adjusted here for the top limit
+        const maxPosition = containerBottom - containerTop - 20; // Adjusted here for the bottom limit
+        newActiveYearPosition = Math.min(Math.max(newActiveYearPosition, minPosition), maxPosition);
+        setActiveYearPosition(newActiveYearPosition);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <section className="py-8 max-w-4xl m-auto" id="aboutme">
+      <div className="container px-4 relative">
+        <h2 className="text-2xl font-normal">My journey</h2>
+        <div className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
+        
+          <div
+            className="absolute transition-all duration-300 ease-in-out"
+            style={{ top: `${activeYearPosition}px`, left: '4rem', transform: 'translateX(-50%)' }}
+          >
+            <div className="w-4 h-4 bg-gradient-to-t from-[#9C749C] to-[#749C74] rounded-full"></div>
+          </div>
+
+          <div className="pl-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+            <p>
+              BearIT ITC-Camp with a focus on Fullstack development.
+              Two Udemy certificates in React, NodeJS, MongoDB, and Express
+              + two more certificates in Agile and Git.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2023</h3>
+            <p>
+              In the fall of 2023, I graduated from Sasky Huittinen
+              adult education institution with a bachelor's degree in Computer Science,
+              Software developer / Fullstack developer.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2020</h3>
+            <p>
+              I am starting self-study of website development with the help of MOOC courses of the Open University of Helsinki (e.g. Full Stack open)
+              and AMKoodari courses of open universities of applied sciences.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">2013</h3>
+            <p>
+              Pirkanmaan aikuisopisto, design assistant, technical illustrator, 3D modeler.
+            </p>
+          </div>
+          <div className="pl-24 mt-24 relative year-container">
+            <h3 className="absolute left-0 text-lg font-semibold">1995</h3>
+            <p>
+              Construction site carpenter, guitar player, library worker, youth instructor, asphalt worker, janitor,
+              smartphone assembly and quality control etc,.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MyJourney;*/}
 
 
 

@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import MyJourney from "./MyJourney";
+//import Journey from "./Journey";
 import Porfile from "./assets/portfolio_ai.jpg";
 import Contact from './Contact'
 import Portfolio from "./assets/portfolio.jpg";
@@ -562,7 +563,6 @@ function App() {
             </div>
           </div>
         </section>*/}
-
 
         <br></br>  <br></br>
       <MyJourney />
