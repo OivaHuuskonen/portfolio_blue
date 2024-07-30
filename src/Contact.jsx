@@ -52,9 +52,9 @@ const Contact = () => {
               whatsapp 
             </a>
           </p>
-          <input className='bg-[#d7cdc0] p-2 border rounded-md' type="text" placeholder='Name' name='name' />
-          <input className='my-4 p-2 bg-[#d7cdc0] border rounded-md' type="email" placeholder='Email' name='email' />
-          <textarea className='bg-[#d7cdc0] p-2 border rounded-md' name="message" rows="10" placeholder='Message'></textarea>
+          <input className='bg-[#FFFFFF] p-2 border rounded-md' type="text" placeholder='Name' name='name' />
+          <input className='my-4 p-2 bg-[#FFFFFF] border rounded-md' type="email" placeholder='Email' name='email' />
+          <textarea className='bg-[#FFFFFF] p-2 border rounded-md' name="message" rows="10" placeholder='Message'></textarea>
           <button className='group border-2 border-[#d7cdc0] px-6 py-3 my-8 rounded-md hover:bg-[#f5eadc] hover:border-[#43513a] mx-auto flex items-center'>Let's collaborate</button>
         </form>
       </div>

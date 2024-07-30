@@ -372,10 +372,15 @@ function App() {
                 </p>
                 <div className="flex mt-12 gap-2">
                  {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-[#376B2F] rounded-full to-[#6B632F] hover:from-blue-700 hover:to-cyan-700">*/}
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:from-[#d7cdc0]  hover:to-[#FFFFFF]">
+                 {/*<button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:from-[#d7cdc0]  hover:to-[#FFFFFF]">
                   <a className='text-[#d7cdc0]' href='https://ezz24.onrender.com'>
                     Live preview
                     </a>
+                  </button>*/}
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
+                  <a className='text' href='https://ezz24.onrender.com'>
+                    Live preview
+                  </a>
                   </button>
                   <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
@@ -394,10 +399,10 @@ function App() {
                   and admin dashboard with AWS SES management system.
                 </p>
                 <div className="flex gap-2 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
                     Live preview
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -413,12 +418,12 @@ function App() {
                   React / Firebase App with responsive SASS layout. Google Auth authentication.
                 </p>
                 <div className="flex gap-4 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                    <a className='text-gray-300' href='https://verenpaine-mitta.web.app/'>
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
+                    <a className='text' href='https://verenpaine-mitta.web.app/'>
                     Live preview
                     </a>
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -432,13 +437,12 @@ function App() {
                  School project made with React and responsive CSS layout.
                 </p>
                 <div className="flex gap-2 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                   
-                    <a className='text-gray-300' href='https://burgerclicker-accd2.web.app/'>
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">  
+                    <a className='text' href='https://burgerclicker-accd2.web.app/'>
                     Live preview
                     </a>
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -455,10 +459,10 @@ function App() {
                   React with responsive TailwindCSS layout. 
                 </p>
                 <div className="flex gap-4 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
                     Live preview
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -472,10 +476,10 @@ function App() {
                   PHP, CSS with MariaDB database. Customers can log in and register for events.
                 </p>
                 <div className="flex gap-2 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
                     Live preview
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -492,10 +496,10 @@ function App() {
                   HTML with responsive TailwindCSS layout. 
                 </p>
                 <div className="flex gap-4 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
                     Live preview
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -511,12 +515,12 @@ function App() {
                   Mern stack with jwt authentication. 
                 </p>
                 <div className="flex gap-4 mt-12">
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c]  hover:from-blue-700 hover:to-cyan-700">
-                  <a className='text-gray-300' href='https://phonebook24.onrender.com/'>
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full bg-[#74889c] hover:border-[#FFFFFF] hover:text-gray-300">
+                  <a className='text' href='https://phonebook24.onrender.com/'>
                     Live preview
                     </a>
                   </button>
-                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <button className="flex-1 text-sm py-3 border border-[#d7cdc0] rounded-full hover:border-[#FFFFFF] hover:text-gray-300">
                     Checkout github
                   </button>
                 </div>
@@ -604,7 +608,7 @@ function App() {
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-20px] duration-300 bg-blue-600'>
-            <a className='flex justify-between items-center w-full pl-5 text-gray-300' href='https://www.linkedin.com'>
+            <a className='flex justify-between items-center w-full pl-6 text-gray-300' href='https://www.linkedin.com'>
               Linkedin <FaLinkedin size={30} className="mr-4"/>
             </a>
           </li>
