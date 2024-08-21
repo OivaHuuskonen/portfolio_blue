@@ -44,7 +44,7 @@ const MyJourney = () => {
   return (
     <section className="py-8 max-w-4xl m-auto" id="aboutme">
       <div className="container px-4 relative">
-        <h2 className="text-2xl font-normal">My journey</h2>
+        <h2 className="text-2xl font-normal">my journey as an application developer</h2>
         <div
           ref={timelineContainerRef}
           className="timeline-container mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white"
@@ -60,15 +60,15 @@ const MyJourney = () => {
           <div className="pl-24 relative year-container">
             <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
             <p>
-              BearIT ITC-Camp with a focus on Fullstack development.
-              Two Udemy certificates in React, NodeJS, MongoDB, and Express
+              code camp with a focus on Fullstack development.
+              Four Udemy certificates in React, NodeJS, MongoDB, and Express
               + two more certificates in Agile and Git.
             </p>
           </div>
           <div className="pl-24 mt-24 relative year-container">
             <h3 className="absolute left-0 text-lg font-semibold">2023</h3>
             <p>
-              In the fall of 2023, I graduated from Sasky Huittinen
+              In the fall of 2023, I graduated from Metropolian AMK
               adult education institution with a bachelor's degree in Computer Science,
               Software developer / Fullstack developer.
             </p>

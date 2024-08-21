@@ -150,7 +150,7 @@ function App() {
  
           <div className="container m-auto px-4 pb-4 bg-[#74889c] text-center sm:text-left pt-6">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-normal text-2xl sm:text-4xl text-[#93a29d5]">Hello, I'm Juha,</h2>
+              <h2 className="font-normal text-2xl sm:text-4xl text-[#93a29d5]">Hey, I'm Juha,</h2>
               {/*<h2 className="font-normal text-2xl mt-1 sm:text-4xl gradient-text">Fullstack developer</h2>*/}
               <h2 className="font-normal text-2xl mt-1 sm:text-4xl">Fullstack developer</h2>
               <p className="mt-4 text-black">
@@ -238,14 +238,14 @@ function App() {
                   <h2 className="font-semibold text-[#43513a]">React</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-                <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-3/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold text-[#43513a]">TailwindCSS</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-                <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-3/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
@@ -254,18 +254,14 @@ function App() {
                   </h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-                <span className="w-full h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-2/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
               <div className="flex justify-between items-center">
                   <h2 className="font-semibold text-[#43513a]">NodeJS</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-
-
-
-               
-                <span className="w-65% h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-2/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
           
               <div className="mt-8">
@@ -273,7 +269,7 @@ function App() {
                   <h2 className="font-semibold text-[#43513a]">Express</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-                <span className="w-65% h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-2/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
 
               <div className="mt-8">
@@ -281,7 +277,7 @@ function App() {
                 <h2 className="font-semibold text-[#43513a]">AWS</h2>
                 <p className="text-[#9C749C]">Advanced</p>
               </div>
-              <span className="w-65% h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+              <span className="w-2/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
 
 
@@ -290,7 +286,7 @@ function App() {
                <h2 className="font-semibold text-[#43513a]">Git / Github</h2>
                <p className="text-[#9C749C]">Advanced</p>
              </div>
-             <span className="w-65% h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+             <span className="w-2/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
              </div>
           
               <div className="mt-8">
@@ -298,16 +294,15 @@ function App() {
                   <h2 className="font-semibold text-[#43513a]">Firebase</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-                <span className="w-65% h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-2/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold text-[#43513a]">Render</h2>
                   <p className="text-[#9C749C]">Advanced</p>
                 </div>
-                <span className="w-65% h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
+                <span className="w-3/4 h-2 mt-2 bg-gradient-to-t from-[#9C749C] to-[#749C74] block rounded-md" />
               </div>
-          
             </div>
           </div>
         </section>
@@ -395,7 +390,7 @@ function App() {
                 <p className="text-[#d7cdc0] text-sm mt-2">
                   MERN Stack (MongoDB, Express, React, NodeJS) 
                   with responsive TailwindCSS layout for Real estate E-commerce. 
-                  Complete admin dashboard for brokers with multiple image uploads, Google maps / Google places integration,  
+                  Complete admin dashboard for brokers with multiple image uploads, Google maps / Google places integration 
                   and admin dashboard with AWS SES management system.
                 </p>
                 <div className="flex gap-2 mt-12">
